@@ -5,6 +5,9 @@ const Todo = () => {
   const [list, setList] = useState([]);
   const [error, setError] = useState();
 
+  
+
+ 
   const AddList = (e) => {
     e.preventDefault();
     if (todo.length === 0) {
@@ -33,12 +36,12 @@ const Todo = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       <div className="container">
         <h2>My To Do List</h2>
         <div className="addlist">
           <input
-            className="inpufeild"
+            className="inputfeild"
             type="text"
             id="myInput"
             placeholder="Title..."
@@ -58,7 +61,7 @@ const Todo = () => {
           onClick={(event) => handleClick(event, index)}
         >
           <div className="cardlist">
-            <input type="checkbox" id={index} style={{ margin: "0 10px" }} />
+          <input type="checkbox" id={index} style={{ margin: "0 10px" }} />
             <h5>{item}</h5>
             <button className="addBtn2" onClick={() => deleteHandler(index)}>
               X

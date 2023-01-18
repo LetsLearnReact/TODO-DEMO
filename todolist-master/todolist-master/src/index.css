@@ -16,6 +16,11 @@ code {
   box-sizing: border-box;
 }
 
+.main{
+  
+  margin: 80px;
+}
+
 .container {
   background-color: #f44336;
   padding:10px 35px;
@@ -48,9 +53,9 @@ code {
 }
 
 .addBtn2 {
-  padding: 5px;
+  padding: 15px;
   width: 5%;
-  background: #d9d9d9;
+  background:transparent;
   color: #555;
   float: right;
   text-align: center;
@@ -58,6 +63,9 @@ code {
   cursor: pointer;
   transition: 0.3s;
   border-radius: 0;
+  height: 40px;
+  right: 10px;
+  top: 5px;
 }
 
 .addBtn2:hover {
@@ -70,17 +78,19 @@ code {
   cursor: pointer;
   position: relative;
   padding: 5px 5px 5px 5px;
+  height: 50px;
 
-  background: #eee;
+  background: transparent;
   font-size: 18px;
   transition: 0.2s;
 }
+
 .listitems:nth-child(odd) {
-  background: #f9f9f9;
+  background: #eee;
 }
 
 
-.inpufeild {
+.inputfeild {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -118,3 +128,4 @@ input {
 h5 {
   margin: 0;
 }
+
