@@ -12,21 +12,17 @@ const Todo = () => {
     } else {
       const newList = [...list, todo];
       setList(newList);
-      console.log(newList);
       setTodo("");
       setError(false);
     }
-
-    // console.log(todo)
   };
 
   const deleteHandler = (indexvalue) => {
     const newList = list.filter((list, index) => index !== indexvalue);
     setList(newList);
-    console.log(indexvalue);
   };
   const handleClick = (event, index) => {
-    console.log(event);
+    event.preventDefault();
     if (event.target.style.textDecoration) {
       event.target.style.removeProperty("text-decoration");
       document.getElementById(index).checked = false;
@@ -49,16 +45,13 @@ const Todo = () => {
             value={todo}
             onChange={(e) => setTodo(e.target.value)}
           ></input>
-
           <button className="addBtn" onClick={AddList}>
             Add
           </button>
         </div>
         {error ? <h1>It should not be empty</h1> : ""}
       </div>
-
       {list.map((item, index) => (
-       
         <div
           key={index}
           className="listitems"
@@ -67,25 +60,12 @@ const Todo = () => {
           <div className="cardlist">
             <input type="checkbox" id={index} style={{ margin: "0 10px" }} />
             <h5>{item}</h5>
-
             <button className="addBtn2" onClick={() => deleteHandler(index)}>
               X
             </button>
           </div>
         </div>
-        
       ))}
-        
-           
-        
-       
-        
-          
-        
-
-          
-       
-     
     </div>
   );
 };
