@@ -72,7 +72,7 @@ code {
   background-color: #bbb;
 }
 
-.listitems {
+#listitems {
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -80,12 +80,12 @@ code {
   padding: 5px 5px 5px 5px;
   height: 50px;
 
-  background: transparent;
+  background: #f9f9f9;
   font-size: 18px;
   transition: 0.2s;
 }
 
-.listitems:nth-child(odd) {
+#listitems:nth-child(odd) {
   background: #eee;
 }
 
@@ -99,12 +99,16 @@ code {
   float: left;
   font-size: 16px;
 }
-.cardlist {
+
+#cardlist {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
-.listitems:hover {
+
+
+
+#listitems:hover {
   background-color: #555;
 }
 
@@ -125,7 +129,8 @@ code {
 input {
   border: none;
 }
-h5 {
+#p1{
   margin: 0;
+  text-align:left;
 }
 

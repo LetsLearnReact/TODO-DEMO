@@ -19,6 +19,7 @@ const Todo = () => {
       setError(false);
     }
   };
+  console.log(list)
 
   const deleteHandler = (indexvalue) => {
     const newList = list.filter((list, index) => index !== indexvalue);
@@ -28,15 +29,33 @@ const Todo = () => {
     event.preventDefault();
     if (event.target.style.textDecoration) {
       event.target.style.removeProperty("text-decoration");
+      
+      document.getElementById("p1").style.color = "black";
+      document.getElementById("listitems").style.backgroundColor = "#f9f9f9";
       document.getElementById(index).checked = false;
+     
     } else {
       event.target.style.setProperty("text-decoration", "line-through");
+      
+      document.getElementById("p1").style.color = "#FFFFFF";
+      document.getElementById("listitems").style.backgroundColor = "#555";
       document.getElementById(index).checked = true;
+      
+
+      
+      
+      
+    
+      
     }
   };
 
+  
+
   return (
+    
     <div className="main">
+      
       <div className="container">
         <h2>My To Do List</h2>
         <div className="addlist">
@@ -57,17 +76,18 @@ const Todo = () => {
       {list.map((item, index) => (
         <div
           key={index}
-          className="listitems"
+          id="listitems"
           onClick={(event) => handleClick(event, index)}
         >
-          <div className="cardlist">
+          <div id="cardlist">
           <input type="checkbox" id={index} style={{ margin: "0 10px" }} />
-            <h5>{item}</h5>
+            <h5 id="p1">{item}</h5>
             <button className="addBtn2" onClick={() => deleteHandler(index)}>
               X
             </button>
           </div>
         </div>
+        
       ))}
     </div>
   );
